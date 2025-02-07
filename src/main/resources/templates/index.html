@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
   <title>Todo App</title>
 </head>
 <body>
-  To Do
+  <h1>Список дел</h1>
+  <ul>
+    <li th:each="item : ${allTodos}">
+      <span th:text="${item.title}"></span>
+    </li>
+  </ul>
 </body>
 </html>
